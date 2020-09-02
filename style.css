@@ -350,6 +350,117 @@ input:required {
   padding-top: 100px;
   padding-bottom: 0; }
 
+.img_round img{
+  width: 5%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.circle-1 {
+  border-radius: 70%;
+  border:5px solid #fff;
+}
+
+.circle-1 img {
+  border-radius: 70%;
+  cursor:pointer;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+}
+.circle-1:hover img {
+ transform: scale(1.1);
+-ms-transform: scale(1.1); 
+-webkit-transform: scale(1.1);
+  
+}
+
+.pda{
+  padding: 10px;
+}
+
+.pda .col-2{
+  width: 20%;
+  margin: auto;
+}
+
+.btn_link {
+  padding: 20px 40px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  color: #53083d;
+  transition: all 0.2s linear;
+  font-size: larger;
+}
+
+.btn_link:hover {
+  background: #df42b1;
+  transform: scale(1.1);
+}
+
+.mg-up h2{
+  margin-top: 2em;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.our-new-sec .col-1, .col-2, .col-3 {
+  width: 30%;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.img_enable img{
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.img_enable{
+  margin-bottom: 2em;
+}
+
+.new-sec-1 {
+  background: #111343;
+  padding: 2em 2em;
+}
+
+.ip h2{
+  color: #fff;
+}
+
+.ip p{
+  font-size: 18px;
+}
+
+.ip a{
+  color: #fff;
+  font-size: 21px;
+  text-transform: uppercase;
+}
+
+.apply{
+  padding: 1.5em 3em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #eee;
+  text-align: center;
+  margin:auto;
+}
+
+.apply p{
+  font-size: 20px;
+}
+
+.submit_btn {
+  padding: 10px 20px;
+  font-size: large;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #111343;
+  color: #fff;
+  margin: 3em 2em;
+}
+
 /* :: 3.0 Preloader Area CSS */
 #preloader {
   position: fixed;
@@ -697,7 +808,7 @@ input:required {
     -webkit-transition-duration: 500ms;
     -o-transition-duration: 500ms;
     transition-duration: 500ms;
-    height: 105px;
+    height: 80px;
     padding: 0; }
     @media only screen and (max-width: 767px) {
       .classy-nav-container .classy-navbar .nav-brand {
