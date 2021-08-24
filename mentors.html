@@ -63,6 +63,51 @@
             background: #df42b1;
             background-image: linear-gradient( 120deg , #505add 0%, #df42b1 100%);  
         }
+        .mentor-list-container{
+            margin-top: 60px;
+            padding-bottom:4rem;
+            display:flex;
+            justify-content:center;
+        }
+        .mentor-details{
+            height:250px;
+            width:500px;
+            border-radius: 5px;
+            box-shadow:0 7px 15px rgba(0,0,0,0.3) ;
+            /* margin:1rem auto; */
+        }
+        .mentor-list-frm-iiita .mentor-details{
+            background:red;
+        }
+        .mentor-list-ots-iiita .mentor-details{
+            background:green;
+        }
+        .mentor-list-frm-iiita, .mentor-list-ots-iiita{
+            display: grid;
+            grid-template-columns:500px 500px;
+            gap: 1rem;
+            margin: 0 auto;
+        }
+        .mentor-list-frm-iiita{
+            display:grid;
+            transition: all 500ms ease-in-out;
+        }
+        .mentor-list-ots-iiita{
+            display:none;
+            transition: all 500ms ease-in-out;
+        }
+        .mentor-details .mentor-img{
+            height: 100px;
+            width: 100px;
+            width:max-content;
+            overflow: hidden;
+            padding:20px 20px;
+        }
+        .mentor-details .mentor-img img{
+            height: 100px;
+            width:100px;
+        }
+
     </style>
 </head>
 <body>
@@ -172,132 +217,33 @@
         </div>
         
 
-    <div class="container">
-        <div class="row mg-part">
-            <div class="col-12">
-                <h3 class="wow fadeInUp" data-wow-delay="300ms">Benefits: </h3>
+    <div class="mentor-list-container col-12">
+        <div class="mentor-list-frm-iiita" data-wow-delay="300ms">
+            <div class=" wow fadeInUp mentor-details " data-wow-delay="100ms">
+                <div class="mentor-img"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div>
+
+            </div>
+            <div class=" wow fadeInUp  mentor-details " data-wow-delay="150ms">
+
+            </div>
+            <div class=" wow fadeInUp mentor-details " data-wow-delay="200ms">
+
             </div>
         </div>
-        <div class="row align-items-center" data-wow-delay="300ms">
-            <!-- <div class="ip wow fadeInUp col-12"> -->
-                <p class=" wow fadeInUp" data-wow-delay="800ms">1. Funding up to Rs. 2,50,000 for expenses as per the GOI, project and IIITA norms.<br>
-                    2. Funding includes stipends to the student team up to Rs. 25,000.<br>
-                    3. Technical and business mentorship support throughout the project as a structured program.<br>
-                    4. Free entry to all incubation events organized by IIIT Allahabad from time to time.<br>
-                    5. Certification to all completed projects.<br>
-                    6. Access to the NewGen IEDC lab and selected facilities of IIIT Allahabad (after the institute opens for student post-pandemic).<br>
-                    7.  Many projects funded so far have bagged a funding support from different sources.<br><br>
-                    
-                    N.B.: Certificate of Participation as well as various goodies are up for grab under various segments to boost the overall confidence of participants.</p>
-            <!-- </div> -->
-        </div>
+        <div class="mentor-list-ots-iiita">
+            <div class="mentor-details">
 
-        
-        <div class="row apply wow fadeInUp" data-wow-delay="300ms">
-            <p>Applications are welcome round the year. To apply download the format</a> and submit the <bold>Google drive</bold> link. </p>
+            </div>
+            <div class="mentor-details">
+            </div>
+            <div class="mentor-details">
 
-            <div class="col-12">
-                <a href="https://drive.google.com/file/d/1XJyEOO7ea6ub4nOiX4K994U1XM2paTzB/view?usp=sharing" target="_blank" class="btn confer-btn">Download format<i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
             </div>
         </div>
     </div>
 </section>
 
-<section class="contact--us-area section-padding-100-0">
-    <div class="container">
-    <div class="row">
-    
-    <div class="col-12 col-lg-12">
-    <div class="contact_from_area mb-100 clearfix">
-    
-    <div class="contact-heading">
-    <h4>Application form</h4>
-    <p>Submit the form to register project for NewGenIEDC</p>
-    </div>
-    <div class="contact_form">
-        <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSehdaeN0p1kQOCOlZ3uRuF-woY0UPrdS-xv-jWzbTvL4UQ-Qw/formResponse" method="post" target="hidden_iframe"   onsubmit="submitted=true">
-    <div class="contact_input_area">
-    <div class="row">
-    
-    <div class="col-12 col-lg-6">
-    <div class="form-group">
-    <input type="text" class="form-control mb-30" name="entry.1879113399" id="Nameleader" placeholder="Your Name" required>
-    </div>
-    </div>
-    
-    <div class="col-12 col-lg-6">
-        <div class="form-group">
-        <input type="email" class="form-control mb-30" name="entry.1893584770" id="EmailId" placeholder="E-mail" required>
-        </div>
-        </div>
-
-
-    <div class="col-12 col-lg-6">
-    <div class="form-group">
-    <input type="number" class="form-control mb-30" name="entry.432100290" id="PhoneNumber" placeholder="Mobile Number" required>
-    </div>
-    </div>
-    
-    
-    
-    <div class="col-12 col-lg-6">
-    <div class="form-group">
-    <input type="text" class="form-control mb-30" name="entry.1065400920" id="College" placeholder="College" required>
-    </div>
-    </div>
-
-   <div class="col-12 col-lg-6">
-    <div class="form-group">
-    <input type="text" class="form-control mb-30" name="entry.1324822821" id="Course" placeholder="Course" required>
-    </div>
-    </div>
-
-    <div class="col-12 col-lg-6">
-        <div class="form-group">
-        <input type="text" class="form-control mb-30" name="entry.1192957493" id="Year" placeholder="Year" required>
-        </div>
-        </div>
-    
-    
-    <!-- <div class="col-12 col-lg-12">
-       <div class="form-group">
-       <textarea name="entry.1797002885" class="form-control mb-30" id="link"  placeholder="drive link" required></textarea>
-       </div>
-    </div> -->
-
-    <div class="col-12 col-lg-12">
-        <div class="form-group">
-        <input type="text" name="entry.1797002885" class="form-control mb-30" id="link"  placeholder="drive link" required >
-        </div>
-    </div>
-
-    <div class="col-12 col-lg-12">
-        <div class="form-group">
-        <input type="text" class="form-control mb-30" name="entry.520683800" id="subject" placeholder="Referred by: ">
-        </div>
-    </div>
-    
-    <div class="col-12">
-    <button type="submit" name="submit" value="SUBMIT" class="btn confer-btn">Apply Now <i class="zmdi zmdi-long-arrow-right"></i></button>
-    </div>
-    </div>
-    </div>
-    </form>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </section>
-    
-
-
-
-  
-
-                    
-    <footer class="footer-area bg-img bg-overlay-2 section-padding-100-0">
+<footer class="footer-area bg-img bg-overlay-2 section-padding-100-0">
         <!-- Main Footer Area -->
         <div class="main-footer-area">
             <div class="container">
