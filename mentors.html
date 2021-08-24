@@ -16,27 +16,52 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./style.css">
     <style>
-        /* Make the image fully responsive */
-        .carousel-inner img {
-            width: 1920px;
-            height: 680px;
+        .mentors-type-select {
+            width: 350px;
+            display: flex;
+            margin: 0 auto;
+            margin-top: 50px;
+            background: #fff;
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 15%), 0 6px 22px 0 rgb(0 0 0 / 20%);
+            cursor: pointer;
+            border-radius:5px;
+            overflow: hidden;
+            position: relative;
         }
-
-        .img1 {
-            width: 100%;
-            height: auto;
+        .mentors-type-select div{
+            width: 50%;
+            display:grid;
+            place-items: center;
         }
-
-        .bgch {
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 40px;
-            border-radius: 20px;
+        .mentors-type-select div p{
+            padding:10px 15px;
+            margin:0;
+            font-size: 17px;
+            font-weight: 500;
+            z-index: 2;
+            transition: all 300ms ease-in-out;
         }
-
-        .carousel-control-next,
-        .carousel-control-prev,
-        .carousel-indicators {
-            filter: invert(100%);
+        .mentors-type-divider{
+            background: #5d5e8d;
+            width:1px;
+            opacity:0.1;
+            height:55px;
+            margin:0;
+            padding:0;
+        }
+        .mentors-frm-iiita-txt{
+            color:#ffffff;
+        }
+        .mentors-outside-iiita-txt{
+            color: #5d5e8d;
+        }
+        #mentor-type-select-tab{
+            position: absolute;
+            height: 55px;
+            z-index: 1;
+            transition: all 300ms ease-in-out;
+            background: #df42b1;
+            background-image: linear-gradient( 120deg , #505add 0%, #df42b1 100%);  
         }
     </style>
 </head>
@@ -123,7 +148,7 @@
     <div class="container">
         <div class="row mg-part">
             <div class="col-12">
-                <h3 class="wow fadeInUp" data-wow-delay="300ms">MENTORS</h3>
+                <h3 class="wow fadeInUp" data-wow-delay="300ms">MENTOR WALL</h3>
             </div>
         </div>
         <div class="row align-items-center">
@@ -133,24 +158,19 @@
                 </p>
             </div>
         </div>
-
-        <div class="row" data-wow-delay="300ms">
-            <div class="btn_link">
-                <a href="https://drive.google.com/file/d/1XJyEOO7ea6ub4nOiX4K994U1XM2paTzB/view?usp=sharing" target="_blank">Download format</a>
-            </div>
-        </div>
-        <div class="row mg-up">
+        <div class="row align-items-center">
             <div class="col-12">
-                <h3 class="wow fadeInUp text-center" data-wow-delay="300ms">Eligibility Criteria:</h3>
+                <div class=" wow fadeInUp" data-wow-delay="300ms">
+                    <div class="mentors-type-select">
+                        <div class="mentors-frm-iiita"><p class="mentors-frm-iiita-txt">From IIIT A</p></div>
+                        <p class="mentors-type-divider"></p>
+                        <div class="mentors-outside-iiita"><p class="mentors-outside-iiita-txt" >Outside IIIT A</p></div>
+                        <div id="mentor-type-select-tab"></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row img_enable" data-wow-delay="300ms">
-           <p class=" wow fadeInUp" data-wow-delay="600ms"> 1. Young recent colleges graduates.<br>
-2. Current UG/PG students of all colleges.<br>
-3.  Applicants need not be a registered startup. No startup registration is necessary under this program.<br>
-</p>
-        </div>
-    </div>
+        
 
     <div class="container">
         <div class="row mg-part">
@@ -187,8 +207,6 @@
 <section class="contact--us-area section-padding-100-0">
     <div class="container">
     <div class="row">
-    
-   
     
     <div class="col-12 col-lg-12">
     <div class="contact_from_area mb-100 clearfix">
