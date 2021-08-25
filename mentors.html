@@ -60,7 +60,7 @@
             height: 55px;
             z-index: 1;
             transition: all 300ms ease-in-out;
-            background: #df42b1;
+            background: #DF42B1;
             background-image: linear-gradient( 120deg , #505add 0%, #df42b1 100%);  
         }
         .mentor-list-container{
@@ -70,22 +70,18 @@
             justify-content:center;
         }
         .mentor-details{
-            height:250px;
-            width:500px;
+            height:20vw;
+            width: 37vw;
             border-radius: 5px;
-            box-shadow:0 7px 15px rgba(0,0,0,0.3) ;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2), -2px -2px 8px rgba(0,0,0,0.1) ;
+            background:#F5F5F5;
+            overflow: hidden;
             /* margin:1rem auto; */
-        }
-        .mentor-list-frm-iiita .mentor-details{
-            background:red;
-        }
-        .mentor-list-ots-iiita .mentor-details{
-            background:green;
         }
         .mentor-list-frm-iiita, .mentor-list-ots-iiita{
             display: grid;
-            grid-template-columns:500px 500px;
-            gap: 1rem;
+            grid-template-columns:37vw 37vw;
+            gap: 1.6rem;
             margin: 0 auto;
         }
         .mentor-list-frm-iiita{
@@ -97,15 +93,21 @@
             transition: all 500ms ease-in-out;
         }
         .mentor-details .mentor-img{
-            height: 100px;
-            width: 100px;
-            width:max-content;
-            overflow: hidden;
-            padding:20px 20px;
+            height: 20vw;
+            width: 15.3vw;
+            /* margin:1vw 1vw; */
+            /* border-radius:8px; */
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+            background-image: linear-gradient(135deg , #505add 0%, #df42b1 100%);
         }
-        .mentor-details .mentor-img img{
-            height: 100px;
-            width:100px;
+        .img-contain{
+            height: 20vw;
+            width: 15vw;
+            overflow: hidden;
+            /* border-radius:7px; */
+        }
+        .mentor-details .mentor-img .img-contain img{
+            width: 15vw;
         }
 
     </style>
@@ -220,7 +222,7 @@
     <div class="mentor-list-container col-12">
         <div class="mentor-list-frm-iiita" data-wow-delay="300ms">
             <div class=" wow fadeInUp mentor-details " data-wow-delay="100ms">
-                <div class="mentor-img"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div>
+                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
 
             </div>
             <div class=" wow fadeInUp  mentor-details " data-wow-delay="150ms">
