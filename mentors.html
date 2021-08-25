@@ -70,12 +70,13 @@
             justify-content:center;
         }
         .mentor-details{
-            height:20vw;
+            height:18vw;
             width: 37vw;
             border-radius: 5px;
             box-shadow: 0 5px 10px rgba(0,0,0,0.2), -2px -2px 8px rgba(0,0,0,0.1) ;
             background:#F5F5F5;
             overflow: hidden;
+            display: flex;
             /* margin:1rem auto; */
         }
         .mentor-list-frm-iiita, .mentor-list-ots-iiita{
@@ -93,7 +94,7 @@
             transition: all 500ms ease-in-out;
         }
         .mentor-details .mentor-img{
-            height: 20vw;
+            height: 18vw;
             width: 15.3vw;
             /* margin:1vw 1vw; */
             /* border-radius:8px; */
@@ -101,13 +102,56 @@
             background-image: linear-gradient(135deg , #505add 0%, #df42b1 100%);
         }
         .img-contain{
-            height: 20vw;
+            height: 18vw;
             width: 15vw;
             overflow: hidden;
             /* border-radius:7px; */
         }
         .mentor-details .mentor-img .img-contain img{
             width: 15vw;
+        }
+        .mentor-details-txt{
+            position:relative;
+            height: 100%;
+            width: 21.7vw;
+        }
+        .mentor-details-txt .mentor-name{
+            position:absolute;
+            top: 1vw;
+            left:2vw;
+            font-weight: 600;
+            font-size: 2.2vw;
+            color: #000
+        }
+        .mentor-details-txt .mentor-skills{
+            position:absolute;
+            top:6vw;
+            left:2vw;
+            display: flex;
+            flex:none;
+            flex-wrap: wrap;
+            gap:8px;
+            height:8vw;
+            width:17vw;
+        }
+        .mentor-skills .mentor-skill-tag{
+            color: #fff;
+            font-size: 1vw;
+            background: rgb(155, 155, 155);
+            height: max-content;
+            width: max-content;
+            padding: 2px 8px;
+            margin:0;
+            border-radius: 3px;
+        }
+
+        .mentor-details-txt .mentor-knw-more{
+            position:absolute;
+            bottom: 1vw;
+            right: 1vw;
+        }
+        .mentor-details-txt .mentor-knw-more .confer-btn{
+            border-radius: 4px;
         }
 
     </style>
@@ -223,13 +267,57 @@
         <div class="mentor-list-frm-iiita" data-wow-delay="300ms">
             <div class=" wow fadeInUp mentor-details " data-wow-delay="100ms">
                 <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
+                <div class="mentor-details-txt">
+                    <p class="mentor-name">Mark Zuck</p>
+                    <div class="mentor-skills">
+                        <p class="mentor-skill-tag">IOT</p>
+                        <p class="mentor-skill-tag">AI</p>
+                        <p class="mentor-skill-tag">ML</p>
+                        <p class="mentor-skill-tag">Data Science</p>
+                        <p class="mentor-skill-tag">IOT</p>
 
+                    </div>
+                    <div class="mentor-knw-more">
+                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
+                        class="zmdi zmdi-long-arrow-right"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class=" wow fadeInUp  mentor-details " data-wow-delay="150ms">
+            <div class=" wow fadeInUp mentor-details " data-wow-delay="150ms">
+                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
+                <div class="mentor-details-txt">
+                    <p class="mentor-name">Mark Zuck</p>
+                    <div class="mentor-skills">
+                        <p class="mentor-skill-tag">IOT</p>
+                        <p class="mentor-skill-tag">AI</p>
+                        <p class="mentor-skill-tag">ML</p>
+                        <p class="mentor-skill-tag">Data Science</p>
+                        <p class="mentor-skill-tag">IOT</p>
 
+                    </div>
+                    <div class="mentor-knw-more">
+                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
+                        class="zmdi zmdi-long-arrow-right"></i></a>
+                    </div>
+                </div>
             </div>
             <div class=" wow fadeInUp mentor-details " data-wow-delay="200ms">
+                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
+                <div class="mentor-details-txt">
+                    <p class="mentor-name">Mark Zuck</p>
+                    <div class="mentor-skills">
+                        <p class="mentor-skill-tag">IOT</p>
+                        <p class="mentor-skill-tag">AI</p>
+                        <p class="mentor-skill-tag">ML</p>
+                        <p class="mentor-skill-tag">Data Science</p>
+                        <p class="mentor-skill-tag">IOT</p>
 
+                    </div>
+                    <div class="mentor-knw-more">
+                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
+                        class="zmdi zmdi-long-arrow-right"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="mentor-list-ots-iiita">
