@@ -69,9 +69,27 @@
             display:flex;
             justify-content:center;
         }
+        .mentor-list-frm-iiita, .mentor-list-ots-iiita{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            justify-content: space-evenly;
+            row-gap:2.4rem;
+            margin: 0 auto;
+        }
+        .mentor-list-frm-iiita{
+            display:flex;
+            transition: all 500ms ease-in-out;
+        }
+        .mentor-list-ots-iiita{
+            display:none;
+            transition: all 500ms ease-in-out;
+        }
+        
         .mentor-details{
-            height:18vw;
-            width: 37vw;
+            height:240px;
+            width:500px;
             border-radius: 5px;
             box-shadow: 0 5px 10px rgba(0,0,0,0.2), -2px -2px 8px rgba(0,0,0,0.1) ;
             background:#F5F5F5;
@@ -79,66 +97,51 @@
             display: flex;
             /* margin:1rem auto; */
         }
-        .mentor-list-frm-iiita, .mentor-list-ots-iiita{
-            display: grid;
-            grid-template-columns:37vw 37vw;
-            gap: 1.6rem;
-            margin: 0 auto;
-        }
-        .mentor-list-frm-iiita{
-            display:grid;
-            transition: all 500ms ease-in-out;
-        }
-        .mentor-list-ots-iiita{
-            display:none;
-            transition: all 500ms ease-in-out;
-        }
         .mentor-details .mentor-img{
-            height: 18vw;
-            width: 15.3vw;
+            height:240px;
+            width:210px;
             /* margin:1vw 1vw; */
             /* border-radius:8px; */
             box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
             background-image: linear-gradient(135deg , #505add 0%, #df42b1 100%);
         }
         .img-contain{
-            height: 18vw;
-            width: 15vw;
+            height:240px;
+            width:205px;
             overflow: hidden;
             /* border-radius:7px; */
         }
         .mentor-details .mentor-img .img-contain img{
-            width: 15vw;
+            width: 205px;
         }
         .mentor-details-txt{
-            position:relative;
             height: 100%;
-            width: 21.7vw;
+            width:275px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
         }
         .mentor-details-txt .mentor-name{
-            position:absolute;
-            top: 1vw;
-            left:2vw;
-            font-weight: 600;
-            font-size: 2.2vw;
-            line-height:30px;
+            font-weight:600;
+            font-size:32px;
+            line-height:32px;
+            padding: 25px 0 0 25px ;
+            /* margin:; */
             color: #000
         }
         .mentor-details-txt .mentor-skills{
-            position:absolute;
-            top:6vw;
-            left:2vw;
+            padding: 5px 5px 0 25px ;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             align-content: flex-start;
             justify-content: space-between;
-            height:8vw;
-            width:17vw;
+            height:110px;
+            width:100%;
         }
         .mentor-skills .mentor-skill-tag{
             color: #fff;
-            font-size: 1vw;
+            font-size: 14px;
             background: rgb(155, 155, 155);
             height: max-content;
             flex:none;
@@ -150,8 +153,8 @@
 
         .mentor-details-txt .mentor-knw-more{
             position:absolute;
-            bottom: 1vw;
-            right: 1vw;
+            bottom: 12px;
+            right: -3px;
         }
         .mentor-details-txt .mentor-knw-more .confer-btn{
             border-radius: 4px;
@@ -161,7 +164,74 @@
             padding: 0 15px;
             align-items:center;
         }
+        @media only screen and (max-width: 650px){
+            .mentors-type-select {
+                width: 52vw;
+                overflow: hidden;
+                height:9.8vw;
+            }
+            .mentors-type-select div{
+                height: 10vw;
+            }
+            .mentors-type-select div p{
+                font-size:2.8vw;
+            }
+            .mentors-type-divider{
+                width:1px;
+                opacity:0.4;
+                height:10vw;
+            }
+            #mentor-type-select-tab{
+                height: 10vw;
+            }
+            .mentor-details{
+                height:30vw;
+                width:70vw;
+            }
+            .mentor-details .mentor-img{
+                height:30vw;
+                width:28vw;
+            }
+            .img-contain{
+                height:30vw;
+                width:27.6vw;
+                overflow: hidden;
+            }
+            .mentor-details .mentor-img .img-contain img{
+                width: 27.6vw;
+            }
+            .mentor-details-txt{
+                width:42vw;
+            }
+            .mentor-details-txt .mentor-name{
+                font-size:4.6vw;
+                line-height:4.6vw;
+                padding: 2.4vw 0 0 2.4vw ;
+                margin-bottom: 1vw;
+            }
+            .mentor-details-txt .mentor-skills{
+                padding:0 2.4vw 0 2.4vw;
+                height:14vw;
+                width:100%;
+            }
+            .mentor-skills .mentor-skill-tag{
+                font-size: 2vw;
+                padding:0.2vw 1vw;
+                margin:4px 2px;
+            }
 
+            .mentor-details-txt .mentor-knw-more{
+                bottom: 2vw;
+                right: 8vw;
+                margin: 0 0 0 auto;
+            }
+            .mentor-details-txt .mentor-knw-more .confer-btn{
+                font-size:2.6vw;
+                height:5vw;
+                line-height:5vw;
+                padding: 0 4vw;
+            }
+        }
     </style>
 </head>
 <body>

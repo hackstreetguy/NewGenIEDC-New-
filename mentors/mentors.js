@@ -12,15 +12,15 @@ showFrmIIITA.addEventListener('click',()=>{
     selectedtab.style.marginLeft = '0';
     showFrmIIITAtxt.style.color = '#ffffff';
     showOtsIIITAtxt.style.color = '#5d5e8d';
-    frmIIITAList.style.display = 'grid';
+    frmIIITAList.style.display = 'flex';
     otsIIITAList.style.display = 'none';
 })
 
 showOtsIIITA.addEventListener('click',()=>{
-    selectedtab.style.marginLeft = '176px';
+    selectedtab.style.marginLeft = '50%';
     showFrmIIITAtxt.style.color = '#5d5e8d';
     showOtsIIITAtxt.style.color = '#ffffff';
     frmIIITAList.style.display = 'none';
-    otsIIITAList.style.display = 'grid';
+    otsIIITAList.style.display = 'flex';
 })
 
