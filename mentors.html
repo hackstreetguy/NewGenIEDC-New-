@@ -186,6 +186,16 @@
             padding: 0 15px;
             align-items:center;
         }
+        .Book_mentor{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+        }
+        .Book_mentor_txt{
+            color:#ffffff;
+            font-size: 5vh;
+            margin:0;
+        }
         @media only screen and (max-width: 650px){
             .mentors-type-select {
                 width: 52vw;
@@ -216,19 +226,26 @@
             }
             .img-contain{
                 height:30vw;
-                width:27.6vw;
+                width:27.4vw;
                 overflow: hidden;
             }
             .mentor-details .mentor-img .img-contain img{
-                width: 27.6vw;
+                /* width: 27.6vw; */
+                height:30vw;
             }
             .mentor-details-txt{
                 width:42vw;
             }
             .mentor-details-txt .mentor-name{
-                font-size:4.6vw;
-                line-height:4.6vw;
-                padding: 2.4vw 0 0 2.4vw ;
+                font-size:4.4vw;
+                line-height:4.4vw;
+                padding: 4.4vw 0 0 2.4vw ;
+                margin-bottom: 0.2vw;
+            }
+            .mentor-details-txt .mentor-surname{
+                font-size:3.2vw;
+                line-height:3.2vw;
+                padding: 0.2vw 0 0 2.4vw ;
                 margin-bottom: 1vw;
             }
             .mentor-details-txt .mentor-skills{
@@ -241,27 +258,30 @@
                 padding:0.2vw 1vw;
                 margin:4px 2px;
             }
-
+            .mentor-skills .mentor-desig{
+                font-size: 2.2vw;
+                padding-top:1vw;
+            }
             .mentor-details-txt .mentor-knw-more{
                 bottom: 2vw;
-                right: 8vw;
+                left: 2.4vw;
                 margin: 0 0 0 auto;
             }
             .mentor-details-txt .mentor-knw-more .confer-btn{
                 font-size:2.6vw;
-                height:5vw;
-                line-height:5vw;
+                height:6vw;
+                line-height:6vw;
                 padding: 0 4vw;
+            }
+            .Book_mentor{
+                flex-direction:column;
+                justify-content:center;
+                gap: 4vw;
             }
         }
     </style>
 </head>
 <body>
-    <script type="text/javascript">var submitted=false;</script>
- <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"      
-    onload="if(submitted) {window.location='thanks/';}"></iframe> 
-
-      
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader"></div>
@@ -314,7 +334,7 @@
     <!-- Header Area End -->
 
     <!-- Breadcrumb Area Start -->
-    <section class="breadcrumb-area bg-img bg-gradient-overlay jarallax" style="background-image: url(../img/bg-img/37.jpg);">
+    <section class="breadcrumb-area bg-img bg-gradient-overlay jarallax" style="background-image: url(./img/bg-img/37.jpg);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -361,207 +381,214 @@
                 </div>
             </div>
         </div>
-        
+        <div class="mentor-list-container col-12">
+            <div class="mentor-list-frm-iiita" data-wow-delay="300ms">     
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="100ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Akshenndra_Garg.jpg" alt="Akshenndra_Garg"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Akshenndra</p>
+                        <p class="mentor-surname">Garg</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Software Specialist Gateway Digital, OY</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Akshenndra_Garg.html"  class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="150ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Naresh_Babu_Kunche.jpg" alt="Naresh_Babu_Kunche"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Naresh Babu</p>
+                        <p class="mentor-surname">Kunche</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Senior Program Manager, CEGIS</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Naresh_Babu_Kunche.html" target="_blank" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="200ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Shilpi_Gupta.jpg" alt="Shilpi_Gupta"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Shilpi</p>
+                        <p class="mentor-surname">Gupta</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Founder & CEO at Edizeven - Restaurant Jobs</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Shilpi_Gupta.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="250ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Gautham_Santhosh.jpg" alt="Gautham_Santhosh"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Gautham</p>
+                        <p class="mentor-surname">Santhosh</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Founder at Polynomial Protocol</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Gautham_Santhosh.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="300ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Vishnu_KS.jpg" alt="Vishnu_KS"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Vishnu</p>
+                        <p class="mentor-surname">KS</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Software Engineer at Yelp</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Vishnu_KS.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="350ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Shefali_Vinod_Ramteke.jpg" alt="Shefali_Vinod_Ramteke"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Shefali Vinod</p>
+                        <p class="mentor-surname">Ramteke</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Founder & COO of PS-1925®</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Shefali_Vinod_Ramteke.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="400ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Paawan_Kumar.jpg" alt="Paawan_Kumar"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Paawan</p>
+                        <p class="mentor-surname">Kumar</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Founder & CEO of PS-1925®</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Paawan_Kumar.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="450ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Ananya_Agarwal.jpg" alt="Ananya_Agarwal"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Ananya</p>
+                        <p class="mentor-surname">Agarwal</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Founder & CEO of Shubhwed</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Ananya_Agarwal.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mentor-list-ots-iiita">
+                <div class="mentor-details ">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Aakarshan_Sethi.jpg" alt="Aakarshan_Sethi"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Mr. Aakarshan</p>
+                        <p class="mentor-surname">Sethi</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Co-founder - The Startup Scholars</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Aakarshan_Sethi.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mentor-details ">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Swapnil_Verma.jpg" alt="Swapnil_Verma"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Mr. Swapnil</p>
+                        <p class="mentor-surname">Verma</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Co-founder - The Startup Scholars</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Swapnil_Verma.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="200ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Ayush_Raj.jpg" alt="Ayush_Raj"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Mr. Ayush</p>
+                        <p class="mentor-surname">Raj</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Business Development Head - The Startup Scholars</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Ayush_Raj.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="250ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Pranav_Goyal.png" alt="Pranav_Goyal"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Mr. Pranav</p>
+                        <p class="mentor-surname">Goyal</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Working in a booming seed-funded FinTech Startup</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Pranav_Goyal.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="300ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Himansh_Ahi.png" alt="Himansh_Ahi"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Mr. Himansh</p>
+                        <p class="mentor-surname">Ahi</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Marketing Head - The Startup Scholars</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Himansh_Ahi.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="350ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Prashant_Katiyar.jpg" alt="Prashant_Katiyar"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Prashant</p>
+                        <p class="mentor-surname">Katiyar</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Founder: COMETLABS (Accelerated by CIE-IIITH) and IIITians Network</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Prashant_Katiyar.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
+        <div class="Book_mentor row apply wow fadeInUp" data-wow-delay="300ms">
+            <p class="Book_mentor_txt">Book your Mentorship Session</p>
 
-    <div class="mentor-list-container col-12">
-        <div class="mentor-list-frm-iiita" data-wow-delay="300ms">     
-            <div class=" wow fadeInUp mentor-details " data-wow-delay="100ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Akshenndra_Garg.jpg" alt="Akshenndra_Garg"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Akshenndra</p>
-                    <p class="mentor-surname">Garg</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-desig">Software Specialist Gateway Digital, OY</p>
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="https://newgeniedc.iiita.ac.in/mentors/Akshenndra_Garg.html" target="_blank" class="btn confer-btn">know more <i
+            <div class="Book_mentor_btn">
+                <a href="https://forms.gle/f5wNEXjWANrAimow6" target="_blank" class="btn confer-btn">Book<i
                         class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class=" wow fadeInUp mentor-details " data-wow-delay="150ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Naresh_Babu_Kunche.jpg" alt="Naresh_Babu_Kunche"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Naresh Babu</p>
-                    <p class="mentor-surname">Kunche</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-desig">Senior Program Manager, CEGIS</p>
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="https://newgeniedc.iiita.ac.in/mentors/Naresh_Babu_Kunche.html" target="_blank" class="btn confer-btn">know more <i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class=" wow fadeInUp mentor-details " data-wow-delay="200ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Shilpi_Gupta.jpg" alt="Shilpi_Gupta"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Shilpi</p>
-                    <p class="mentor-surname">Gupta</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-desig">Founder & CEO at Edizeven - Restaurant Jobs</p>
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="https://newgeniedc.iiita.ac.in/mentors/Shilpi_Gupta.html" target="_blank"class="btn confer-btn">know more <i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class=" wow fadeInUp mentor-details " data-wow-delay="250ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Gautham_Santhosh.jpg" alt="Gautham_Santhosh"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Gautham</p>
-                    <p class="mentor-surname">Santhosh</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-desig">Founder at Polynomial Protocol</p>
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="https://newgeniedc.iiita.ac.in/mentors/Gautham_Santhosh.html" target="_blank"class="btn confer-btn">know more <i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class=" wow fadeInUp mentor-details " data-wow-delay="300ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Vishnu_KS.jpg" alt="Vishnu_KS"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Vishnu</p>
-                    <p class="mentor-surname">KS</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-desig">Software Engineer at Yelp</p>
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="https://newgeniedc.iiita.ac.in/mentors/Vishnu_KS.html" target="_blank"class="btn confer-btn">know more <i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class=" wow fadeInUp mentor-details " data-wow-delay="350ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Shefali_Vinod_Ramteke.jpg" alt="Shefali_Vinod_Ramteke"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Shefali Vinod</p>
-                    <p class="mentor-surname">Ramteke</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-desig">Founder & COO of PS-1925®</p>
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="https://newgeniedc.iiita.ac.in/mentors/Shefali_Vinod_Ramteke.html" target="_blank"class="btn confer-btn">know more <i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class=" wow fadeInUp mentor-details " data-wow-delay="400ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Paawan_Kumar.jpg" alt="Paawan_Kumar"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Paawan</p>
-                    <p class="mentor-surname">Kumar</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-desig">Founder & CEO of PS-1925®</p>
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="https://newgeniedc.iiita.ac.in/mentors/Paawan_Kumar.html" target="_blank"class="btn confer-btn">know more <i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class=" wow fadeInUp mentor-details " data-wow-delay="450ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Ananya_Agarwal.jpg" alt="Ananya_Agarwal"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Ananya</p>
-                    <p class="mentor-surname">Agarwal</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-desig">Founder & CEO of Shubhwed</p>
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="https://newgeniedc.iiita.ac.in/mentors/Ananya_Agarwal.html" target="_blank"class="btn confer-btn">know more <i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="mentor-list-ots-iiita">
-            <div class="mentor-details ">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Aakarshan_Sethi.jpg" alt="Aakarshan_Sethi"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Mr. Aakarshan</p>
-                    <p class="mentor-surname">Sethi</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-desig">Co-founder - The Startup Scholars</p>
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="https://newgeniedc.iiita.ac.in/mentors/Aakarshan_Sethi.html" target="_blank"class="btn confer-btn">know more <i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="mentor-details ">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Swapnil_Verma.jpg" alt="Swapnil_Verma"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Mr. Swapnil</p>
-                    <p class="mentor-surname">Verma</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-desig">Co-founder - The Startup Scholars</p>
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="https://newgeniedc.iiita.ac.in/mentors/Swapnil_Verma.html" target="_blank"class="btn confer-btn">know more <i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class=" wow fadeInUp mentor-details " data-wow-delay="200ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Ayush_Raj.jpg" alt="Ayush_Raj"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Mr. Ayush</p>
-                    <p class="mentor-surname">Raj</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-desig">Business Development Head - The Startup Scholars</p>
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="https://newgeniedc.iiita.ac.in/mentors/Ayush_Raj.html" target="_blank"class="btn confer-btn">know more <i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class=" wow fadeInUp mentor-details " data-wow-delay="250ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Pranav_Goyal.png" alt="Pranav_Goyal"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Mr. Pranav</p>
-                    <p class="mentor-surname">Goyal</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-desig">Working in a booming seed-funded FinTech Startup</p>
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="https://newgeniedc.iiita.ac.in/mentors/Pranav_Goyal.html" target="_blank"class="btn confer-btn">know more <i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class=" wow fadeInUp mentor-details " data-wow-delay="300ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Himansh_Ahi.png" alt="Himansh_Ahi"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Mr. Himansh</p>
-                    <p class="mentor-surname">Ahi</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-desig">Marketing Head - The Startup Scholars</p>
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="https://newgeniedc.iiita.ac.in/mentors/Himansh_Ahi.html" target="_blank"class="btn confer-btn">know more <i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class=" wow fadeInUp mentor-details " data-wow-delay="350ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Prashant_Katiyar.jpg" alt="Prashant_Katiyar"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Prashant</p>
-                    <p class="mentor-surname">Katiyar</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-desig">Founder: COMETLABS (Accelerated by CIE-IIITH) and IIITians Network</p>
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="https://newgeniedc.iiita.ac.in/mentors/Prashant_Katiyar.html" target="_blank"class="btn confer-btn">know more <i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
