@@ -112,7 +112,8 @@
             /* border-radius:7px; */
         }
         .mentor-details .mentor-img .img-contain img{
-            width: 205px;
+            height: 240px;
+            object-fit: cover;
         }
         .mentor-details-txt{
             height: 100%;
@@ -123,10 +124,18 @@
         }
         .mentor-details-txt .mentor-name{
             font-weight:600;
-            font-size:32px;
-            line-height:32px;
-            padding: 25px 0 0 25px ;
-            /* margin:; */
+            font-size:26px;
+            line-height:20px;
+            padding: 40px 0 0 25px ;
+            margin-bottom:10px;
+            color: #000
+        }
+        .mentor-details-txt .mentor-surname{
+            font-weight:600;
+            font-size:22px;
+            line-height:22px;
+            padding: 0 0 0 25px ;
+            margin-bottom: 10px;
             color: #000
         }
         .mentor-details-txt .mentor-skills{
@@ -139,6 +148,20 @@
             height:110px;
             width:100%;
         }
+        .mentor-skills .mentor-desig{
+            color: #df42b1;
+            font-size: 14px;
+            font-weight: 600;
+            line-height:110%;
+            /* background: rgb(155, 155, 155); */
+            height: max-content;
+            flex:none;
+            width: 100%;
+            /* padding: 2px 8px; */
+            /* margin:4px 2px; */
+            /* border-radius: 3px; */
+        }
+        
         .mentor-skills .mentor-skill-tag{
             color: #fff;
             font-size: 14px;
@@ -150,7 +173,6 @@
             margin:4px 2px;
             border-radius: 3px;
         }
-
         .mentor-details-txt .mentor-knw-more{
             position:absolute;
             bottom: 12px;
@@ -342,165 +364,115 @@
         
 
     <div class="mentor-list-container col-12">
-        <div class="mentor-list-frm-iiita" data-wow-delay="300ms">
+        <div class="mentor-list-frm-iiita" data-wow-delay="300ms">     
             <div class=" wow fadeInUp mentor-details " data-wow-delay="100ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
+                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Akshenndra_Garg.jpg" alt="Akshenndra_Garg"/></div></div>
                 <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck</p>
+                    <p class="mentor-name">Akshenndra</p>
+                    <p class="mentor-surname">Garg</p>
                     <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">Deep Learning</p>
-
+                        <p class="mentor-desig">Software Specialist Gateway Digital, OY</p>
                     </div>
                     <div class="mentor-knw-more">
-                        <a href="https://newgeniedc.iiita.ac.in/mentors/Mark.html" target="_blank"class="btn confer-btn">know more <i
+                        <a href="https://newgeniedc.iiita.ac.in/mentors/Akshenndra_Garg.html" target="_blank" class="btn confer-btn">know more <i
                         class="zmdi zmdi-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class=" wow fadeInUp mentor-details " data-wow-delay="150ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
+                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Naresh_Babu_Kunche.jpg" alt="Naresh_Babu_Kunche"/></div></div>
                 <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck</p>
+                    <p class="mentor-name">Naresh Babu</p>
+                    <p class="mentor-surname">Kunche</p>
                     <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">IOT</p>
-
+                        <p class="mentor-desig">Senior Program Manager, CEGIS</p>
                     </div>
                     <div class="mentor-knw-more">
-                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
+                        <a href="https://newgeniedc.iiita.ac.in/mentors/Naresh_Babu_Kunche.html" target="_blank" class="btn confer-btn">know more <i
                         class="zmdi zmdi-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class=" wow fadeInUp mentor-details " data-wow-delay="200ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
+                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Shilpi_Gupta.jpg" alt="Shilpi_Gupta"/></div></div>
                 <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck</p>
+                    <p class="mentor-name">Shilpi</p>
+                    <p class="mentor-surname">Gupta</p>
                     <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">IOT</p>
-
+                        <p class="mentor-desig">Founder & CEO at Edizeven - Restaurant Jobs</p>
                     </div>
                     <div class="mentor-knw-more">
-                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
+                        <a href="https://newgeniedc.iiita.ac.in/mentors/Shilpi_Gupta.html" target="_blank"class="btn confer-btn">know more <i
                         class="zmdi zmdi-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class=" wow fadeInUp mentor-details " data-wow-delay="250ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
+                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Gautham_Santhosh.jpg" alt="Gautham_Santhosh"/></div></div>
                 <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck</p>
+                    <p class="mentor-name">Gautham</p>
+                    <p class="mentor-surname">Santhosh</p>
                     <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">Deep Learning</p>
-
+                        <p class="mentor-desig">Founder at Polynomial Protocol</p>
                     </div>
                     <div class="mentor-knw-more">
-                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
+                        <a href="https://newgeniedc.iiita.ac.in/mentors/Gautham_Santhosh.html" target="_blank"class="btn confer-btn">know more <i
                         class="zmdi zmdi-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class=" wow fadeInUp mentor-details " data-wow-delay="300ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
+                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Vishnu_KS.jpg" alt="Vishnu_KS"/></div></div>
                 <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck</p>
+                    <p class="mentor-name">Vishnu</p>
+                    <p class="mentor-surname">KS</p>
                     <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">IOT</p>
-
+                        <p class="mentor-desig">Software Engineer at Yelp</p>
                     </div>
                     <div class="mentor-knw-more">
-                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
+                        <a href="https://newgeniedc.iiita.ac.in/mentors/Vishnu_KS.html" target="_blank"class="btn confer-btn">know more <i
                         class="zmdi zmdi-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class=" wow fadeInUp mentor-details " data-wow-delay="350ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
+                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Shefali_Vinod_Ramteke.jpg" alt="Shefali_Vinod_Ramteke"/></div></div>
                 <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck</p>
+                    <p class="mentor-name">Shefali Vinod</p>
+                    <p class="mentor-surname">Ramteke</p>
                     <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">IOT</p>
-
+                        <p class="mentor-desig">Founder & COO of PS-1925®</p>
                     </div>
                     <div class="mentor-knw-more">
-                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
+                        <a href="https://newgeniedc.iiita.ac.in/mentors/Shefali_Vinod_Ramteke.html" target="_blank"class="btn confer-btn">know more <i
                         class="zmdi zmdi-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class=" wow fadeInUp mentor-details " data-wow-delay="400ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
+                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Paawan_Kumar.jpg" alt="Paawan_Kumar"/></div></div>
                 <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck</p>
+                    <p class="mentor-name">Paawan</p>
+                    <p class="mentor-surname">Kumar</p>
                     <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">Deep Learning</p>
-
+                        <p class="mentor-desig">Founder & CEO of PS-1925®</p>
                     </div>
                     <div class="mentor-knw-more">
-                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
+                        <a href="https://newgeniedc.iiita.ac.in/mentors/Paawan_Kumar.html" target="_blank"class="btn confer-btn">know more <i
                         class="zmdi zmdi-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class=" wow fadeInUp mentor-details " data-wow-delay="450ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
+                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Ananya_Agarwal.jpg" alt="Ananya_Agarwal"/></div></div>
                 <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck</p>
+                    <p class="mentor-name">Ananya</p>
+                    <p class="mentor-surname">Agarwal</p>
                     <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">IOT</p>
-
+                        <p class="mentor-desig">Founder & CEO of Shubhwed</p>
                     </div>
                     <div class="mentor-knw-more">
-                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class=" wow fadeInUp mentor-details " data-wow-delay="500ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">IOT</p>
-
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
+                        <a href="https://newgeniedc.iiita.ac.in/mentors/Ananya_Agarwal.html" target="_blank"class="btn confer-btn">know more <i
                         class="zmdi zmdi-long-arrow-right"></i></a>
                     </div>
                 </div>
@@ -508,163 +480,85 @@
         </div>
         <div class="mentor-list-ots-iiita">
             <div class="mentor-details ">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
+                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Aakarshan_Sethi.jpg" alt="Aakarshan_Sethi"/></div></div>
                 <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck outside</p>
+                    <p class="mentor-name">Mr. Aakarshan</p>
+                    <p class="mentor-surname">Sethi</p>
                     <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">Deep Learning</p>
-
+                        <p class="mentor-desig">Co-founder - The Startup Scholars</p>
                     </div>
                     <div class="mentor-knw-more">
-                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
+                        <a href="https://newgeniedc.iiita.ac.in/mentors/Aakarshan_Sethi.html" target="_blank"class="btn confer-btn">know more <i
                         class="zmdi zmdi-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="mentor-details">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
+            <div class="mentor-details ">
+                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Swapnil_Verma.jpg" alt="Swapnil_Verma"/></div></div>
                 <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck Outside</p>
+                    <p class="mentor-name">Mr. Swapnil</p>
+                    <p class="mentor-surname">Verma</p>
                     <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">IOT</p>
-
+                        <p class="mentor-desig">Co-founder - The Startup Scholars</p>
                     </div>
                     <div class="mentor-knw-more">
-                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
+                        <a href="https://newgeniedc.iiita.ac.in/mentors/Swapnil_Verma.html" target="_blank"class="btn confer-btn">know more <i
                         class="zmdi zmdi-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="mentor-details">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
+            <div class=" wow fadeInUp mentor-details " data-wow-delay="200ms">
+                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Ayush_Raj.jpg" alt="Ayush_Raj"/></div></div>
                 <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck Outside</p>
+                    <p class="mentor-name">Mr. Ayush</p>
+                    <p class="mentor-surname">Raj</p>
                     <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">IOT</p>
-
+                        <p class="mentor-desig">Business Development Head - The Startup Scholars</p>
                     </div>
                     <div class="mentor-knw-more">
-                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
+                        <a href="https://newgeniedc.iiita.ac.in/mentors/Ayush_Raj.html" target="_blank"class="btn confer-btn">know more <i
                         class="zmdi zmdi-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="mentor-details">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
+            <div class=" wow fadeInUp mentor-details " data-wow-delay="250ms">
+                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Pranav_Goyal.png" alt="Pranav_Goyal"/></div></div>
                 <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck</p>
+                    <p class="mentor-name">Mr. Pranav</p>
+                    <p class="mentor-surname">Goyal</p>
                     <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">Deep Learning</p>
-
+                        <p class="mentor-desig">Working in a booming seed-funded FinTech Startup</p>
                     </div>
                     <div class="mentor-knw-more">
-                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
+                        <a href="https://newgeniedc.iiita.ac.in/mentors/Pranav_Goyal.html" target="_blank"class="btn confer-btn">know more <i
                         class="zmdi zmdi-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class=" wow fadeInUp mentor-details " data-wow-delay="300ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
+                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Himansh_Ahi.png" alt="Himansh_Ahi"/></div></div>
                 <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck</p>
+                    <p class="mentor-name">Mr. Himansh</p>
+                    <p class="mentor-surname">Ahi</p>
                     <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">IOT</p>
-
+                        <p class="mentor-desig">Marketing Head - The Startup Scholars</p>
                     </div>
                     <div class="mentor-knw-more">
-                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
+                        <a href="https://newgeniedc.iiita.ac.in/mentors/Himansh_Ahi.html" target="_blank"class="btn confer-btn">know more <i
                         class="zmdi zmdi-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class=" wow fadeInUp mentor-details " data-wow-delay="350ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
+                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Prashant_Katiyar.jpg" alt="Prashant_Katiyar"/></div></div>
                 <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck</p>
+                    <p class="mentor-name">Prashant</p>
+                    <p class="mentor-surname">Katiyar</p>
                     <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">IOT</p>
-
+                        <p class="mentor-desig">Founder: COMETLABS (Accelerated by CIE-IIITH) and IIITians Network</p>
                     </div>
                     <div class="mentor-knw-more">
-                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class=" wow fadeInUp mentor-details " data-wow-delay="400ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">Deep Learning</p>
-
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class=" wow fadeInUp mentor-details " data-wow-delay="450ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">IOT</p>
-
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
-                        class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class=" wow fadeInUp mentor-details " data-wow-delay="500ms">
-                <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Mark-Zuck.jpg" alt="Mark Zuck"/></div></div>
-                <div class="mentor-details-txt">
-                    <p class="mentor-name">Mark Zuck</p>
-                    <div class="mentor-skills">
-                        <p class="mentor-skill-tag">IOT</p>
-                        <p class="mentor-skill-tag">AI</p>
-                        <p class="mentor-skill-tag">ML</p>
-                        <p class="mentor-skill-tag">Data Science</p>
-                        <p class="mentor-skill-tag">IOT</p>
-
-                    </div>
-                    <div class="mentor-knw-more">
-                        <a href="mailto:newgeniedc@iiita.ac.in" class="btn confer-btn">know more <i
+                        <a href="https://newgeniedc.iiita.ac.in/mentors/Prashant_Katiyar.html" target="_blank"class="btn confer-btn">know more <i
                         class="zmdi zmdi-long-arrow-right"></i></a>
                     </div>
                 </div>
