@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title> NewGenIEDC IIIT ALLAHABAD</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href=" ">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .mentors-type-select {
+            width: 350px;
+            display: flex;
+            margin: 0 auto;
+            margin-top: 50px;
+            background: #fff;
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 15%), 0 6px 22px 0 rgb(0 0 0 / 20%);
+            cursor: pointer;
+            border-radius:5px;
+            overflow: hidden;
+            position: relative;
+        }
+        .mentors-type-select div{
+            width: 50%;
+            display:grid;
+            place-items: center;
+        }
+        .mentors-type-select div p{
+            padding:10px 15px;
+            margin:0;
+            font-size: 17px;
+            font-weight: 500;
+            z-index: 2;
+            transition: all 300ms ease-in-out;
+        }
+        .mentors-type-divider{
+            background: #5d5e8d;
+            width:1px;
+            opacity:0.1;
+            height:55px;
+            margin:0;
+            padding:0;
+        }
+        .mentors-frm-iiita-txt{
+            color:#ffffff;
+        }
+        .mentors-outside-iiita-txt{
+            color: #5d5e8d;
+        }
+        #mentor-type-select-tab{
+            position: absolute;
+            height: 55px;
+            z-index: 1;
+            transition: all 300ms ease-in-out;
+            background: #DF42B1;
+            background-image: linear-gradient( 120deg , #505add 0%, #df42b1 100%);  
+        }
+        .mentor-list-container{
+            margin-top: 60px;
+            padding-bottom:4rem;
+            display:flex;
+            justify-content:center;
+        }
+        .mentor-list-frm-iiita, .mentor-list-ots-iiita{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            justify-content: space-evenly;
+            row-gap:2.4rem;
+            margin: 0 auto;
+        }
+        .mentor-list-frm-iiita{
+            display:flex;
+            transition: all 500ms ease-in-out;
+        }
+        .mentor-list-ots-iiita{
+            display:none;
+            transition: all 500ms ease-in-out;
+        }
+        
+        .mentor-details{
+            height:240px;
+            width:500px;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2), -2px -2px 8px rgba(0,0,0,0.1) ;
+            background:#F5F5F5;
+            overflow: hidden;
+            display: flex;
+            /* margin:1rem auto; */
+        }
+        .mentor-details .mentor-img{
+            height:240px;
+            width:210px;
+            /* margin:1vw 1vw; */
+            /* border-radius:8px; */
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+            background-image: linear-gradient(135deg , #505add 0%, #df42b1 100%);
+        }
+        .img-contain{
+            height:240px;
+            width:205px;
+            overflow: hidden;
+            /* border-radius:7px; */
+        }
+        .mentor-details .mentor-img .img-contain img{
+            height: 240px;
+            object-fit: cover;
+        }
+        .mentor-details-txt{
+            height: 100%;
+            width:275px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .mentor-details-txt .mentor-name{
+            font-weight:600;
+            font-size:26px;
+            line-height:20px;
+            padding: 40px 0 0 25px ;
+            margin-bottom:10px;
+            color: #000
+        }
+        .mentor-details-txt .mentor-surname{
+            font-weight:600;
+            font-size:22px;
+            line-height:22px;
+            padding: 0 0 0 25px ;
+            margin-bottom: 10px;
+            color: #000
+        }
+        .mentor-details-txt .mentor-skills{
+            padding: 5px 5px 0 25px ;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: flex-start;
+            justify-content: space-between;
+            height:110px;
+            width:100%;
+        }
+        .mentor-skills .mentor-desig{
+            color: #df42b1;
+            font-size: 14px;
+            font-weight: 600;
+            line-height:110%;
+            /* background: rgb(155, 155, 155); */
+            height: max-content;
+            flex:none;
+            width: 100%;
+            /* padding: 2px 8px; */
+            /* margin:4px 2px; */
+            /* border-radius: 3px; */
+        }
+        
+        .mentor-skills .mentor-skill-tag{
+            color: #fff;
+            font-size: 14px;
+            background: rgb(155, 155, 155);
+            height: max-content;
+            flex:none;
+            width: max-content;
+            padding: 2px 8px;
+            margin:4px 2px;
+            border-radius: 3px;
+        }
+        .mentor-details-txt .mentor-knw-more{
+            position:absolute;
+            bottom: 12px;
+            right: -3px;
+        }
+        .mentor-details-txt .mentor-knw-more .confer-btn{
+            border-radius: 4px;
+            font-size: 13px;
+            height:40px;
+            line-height: 40px;
+            padding: 0 15px;
+            align-items:center;
+        }
+        .Book_mentor{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+        }
+        .Book_mentor_txt{
+            color:#ffffff;
+            font-size: 5vh;
+            margin:0;
+        }
+        @media only screen and (max-width: 650px){
+            .mentors-type-select {
+                width: 52vw;
+                overflow: hidden;
+                height:9.8vw;
+            }
+            .mentors-type-select div{
+                height: 10vw;
+            }
+            .mentors-type-select div p{
+                font-size:2.8vw;
+            }
+            .mentors-type-divider{
+                width:1px;
+                opacity:0.4;
+                height:10vw;
+            }
+            #mentor-type-select-tab{
+                height: 10vw;
+            }
+            .mentor-details{
+                height:30vw;
+                width:70vw;
+            }
+            .mentor-details .mentor-img{
+                height:30vw;
+                width:28vw;
+            }
+            .img-contain{
+                height:30vw;
+                width:27.4vw;
+                overflow: hidden;
+            }
+            .mentor-details .mentor-img .img-contain img{
+                /* width: 27.6vw; */
+                height:30vw;
+            }
+            .mentor-details-txt{
+                width:42vw;
+            }
+            .mentor-details-txt .mentor-name{
+                font-size:4.4vw;
+                line-height:4.4vw;
+                padding: 4.4vw 0 0 2.4vw ;
+                margin-bottom: 0.2vw;
+            }
+            .mentor-details-txt .mentor-surname{
+                font-size:3.2vw;
+                line-height:3.2vw;
+                padding: 0.2vw 0 0 2.4vw ;
+                margin-bottom: 1vw;
+            }
+            .mentor-details-txt .mentor-skills{
+                padding:0 2.4vw 0 2.4vw;
+                height:14vw;
+                width:100%;
+            }
+            .mentor-skills .mentor-skill-tag{
+                font-size: 2vw;
+                padding:0.2vw 1vw;
+                margin:4px 2px;
+            }
+            .mentor-skills .mentor-desig{
+                font-size: 2.2vw;
+                padding-top:1vw;
+            }
+            .mentor-details-txt .mentor-knw-more{
+                bottom: 2vw;
+                left: 2.4vw;
+                margin: 0 0 0 auto;
+            }
+            .mentor-details-txt .mentor-knw-more .confer-btn{
+                font-size:2.6vw;
+                height:6vw;
+                line-height:6vw;
+                padding: 0 4vw;
+            }
+            .Book_mentor{
+                flex-direction:column;
+                justify-content:center;
+                gap: 4vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- /Preloader -->
+
+    <!-- Header Area Start -->
+    <header class="header-area">
+        <div class="classy-nav-container breakpoint-off">
+            <div class="container">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="conferNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand" href="https://newgeniedc.iiita.ac.in/"><img src="./img/core-img/logo.ico" width="40%" alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+                        <!-- Menu Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul id="nav">
+                                <li><a href="https://newgeniedc.iiita.ac.in/">Home</a></li>
+                                <li><a href="https://newgeniedc.iiita.ac.in/#about">About Us</a></li>
+                                <li><a href="https://newgeniedc.iiita.ac.in/#nisp">NISP details</a></li>
+                                <li><a href="https://newgeniedc.iiita.ac.in/#speaker">Committees</a></li>
+                                <li><a href="https://newgeniedc.iiita.ac.in/#project">Projects</a></li>
+                                <li><a href="https://newgeniedc.iiita.ac.in/startup.html">Startups</a></li>
+                                <li class="active"><a href="https://newgeniedc.iiita.ac.in/mentors.html">Mentors</a></li>
+                                <li><a href="https://newgeniedc.iiita.ac.in/#contact">Contact</a></li>                              
+                            </ul>
+
+                            <!-- Get Tickets Button -->
+                            <!-- <a href="#" class="btn confer-btn mt-3 mt-lg-0 ml-3 ml-lg-5">Get Tickets <i class="zmdi zmdi-long-arrow-right"></i></a> -->
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Breadcrumb Area Start -->
+    <section class="breadcrumb-area bg-img bg-gradient-overlay jarallax" style="background-image: url(./img/bg-img/37.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content">
+                        <h2 class="page-title">IIIT ALLAHABAD</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Mentors</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Area End -->
+
+   
+ <!--New Section-->
+ <section class="our-new-sec" id="mentors">
+    <div class="container">
+        <div class="row mg-part">
+            <div class="col-12">
+                <h3 class="wow fadeInUp" data-wow-delay="300ms">MENTOR WALL</h3>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-12">
+                <p class=" wow fadeInUp" data-wow-delay="300ms">
+                     IIITA's Info Communication and Incubation Center aka IIIC is a business incubator set up under the aegis of IIIT Allahabad. Since its inception, IIIC has played a crucial role in developing entrepreneurial mindset among the students of IIIT Allahabad.
+                </p>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-12">
+                <div class=" wow fadeInUp" data-wow-delay="300ms">
+                    <div class="mentors-type-select">
+                        <div class="mentors-frm-iiita"><p class="mentors-frm-iiita-txt">From IIIT A</p></div>
+                        <p class="mentors-type-divider"></p>
+                        <div class="mentors-outside-iiita"><p class="mentors-outside-iiita-txt" >Outside IIIT A</p></div>
+                        <div id="mentor-type-select-tab"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mentor-list-container col-12">
+            <div class="mentor-list-frm-iiita" data-wow-delay="300ms">     
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="100ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Akshenndra_Garg.jpg" alt="Akshenndra_Garg"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Akshenndra</p>
+                        <p class="mentor-surname">Garg</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Software Specialist Gateway Digital, OY</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Akshenndra_Garg.html"  class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="150ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Naresh_Babu_Kunche.jpg" alt="Naresh_Babu_Kunche"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Naresh Babu</p>
+                        <p class="mentor-surname">Kunche</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Senior Program Manager, CEGIS</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Naresh_Babu_Kunche.html" target="_blank" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="200ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Shilpi_Gupta.jpg" alt="Shilpi_Gupta"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Shilpi</p>
+                        <p class="mentor-surname">Gupta</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Founder & CEO at Edizeven - Restaurant Jobs</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Shilpi_Gupta.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="250ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Gautham_Santhosh.jpg" alt="Gautham_Santhosh"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Gautham</p>
+                        <p class="mentor-surname">Santhosh</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Founder at Polynomial Protocol</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Gautham_Santhosh.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="300ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Vishnu_KS.jpg" alt="Vishnu_KS"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Vishnu</p>
+                        <p class="mentor-surname">KS</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Software Engineer at Yelp</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Vishnu_KS.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="350ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Shefali_Vinod_Ramteke.jpg" alt="Shefali_Vinod_Ramteke"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Shefali Vinod</p>
+                        <p class="mentor-surname">Ramteke</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Founder & COO of PS-1925®</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Shefali_Vinod_Ramteke.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="400ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Paawan_Kumar.jpg" alt="Paawan_Kumar"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Paawan</p>
+                        <p class="mentor-surname">Kumar</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Founder & CEO of PS-1925®</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Paawan_Kumar.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="450ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Ananya_Agarwal.jpg" alt="Ananya_Agarwal"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Ananya</p>
+                        <p class="mentor-surname">Agarwal</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Founder & CEO of Shubhwed</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Ananya_Agarwal.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mentor-list-ots-iiita">
+                <div class="mentor-details ">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Aakarshan_Sethi.jpg" alt="Aakarshan_Sethi"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Mr. Aakarshan</p>
+                        <p class="mentor-surname">Sethi</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Co-founder - The Startup Scholars</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Aakarshan_Sethi.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mentor-details ">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Swapnil_Verma.jpg" alt="Swapnil_Verma"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Mr. Swapnil</p>
+                        <p class="mentor-surname">Verma</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Co-founder - The Startup Scholars</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Swapnil_Verma.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="200ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Ayush_Raj.jpg" alt="Ayush_Raj"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Mr. Ayush</p>
+                        <p class="mentor-surname">Raj</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Business Development Head - The Startup Scholars</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Ayush_Raj.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="250ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Pranav_Goyal.png" alt="Pranav_Goyal"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Mr. Pranav</p>
+                        <p class="mentor-surname">Goyal</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Working in a booming seed-funded FinTech Startup</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Pranav_Goyal.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="300ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Himansh_Ahi.png" alt="Himansh_Ahi"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Mr. Himansh</p>
+                        <p class="mentor-surname">Ahi</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Marketing Head - The Startup Scholars</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Himansh_Ahi.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow fadeInUp mentor-details " data-wow-delay="350ms">
+                    <div class="mentor-img"><div class="img-contain"><img src="./mentors/assets/Prashant_Katiyar.jpg" alt="Prashant_Katiyar"/></div></div>
+                    <div class="mentor-details-txt">
+                        <p class="mentor-name">Prashant</p>
+                        <p class="mentor-surname">Katiyar</p>
+                        <div class="mentor-skills">
+                            <p class="mentor-desig">Founder: COMETLABS (Accelerated by CIE-IIITH) and IIITians Network</p>
+                        </div>
+                        <div class="mentor-knw-more">
+                            <a href="./mentors/Prashant_Katiyar.html" class="btn confer-btn">know more <i
+                            class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
+        <div class="Book_mentor row apply wow fadeInUp" data-wow-delay="300ms">
+            <p class="Book_mentor_txt">Book your Mentorship Session</p>
+
+            <div class="Book_mentor_btn">
+                <a href="https://forms.gle/f5wNEXjWANrAimow6" target="_blank" class="btn confer-btn">Book<i
+                        class="zmdi zmdi-long-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-area bg-img bg-overlay-2 section-padding-100-0">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container">
+                <div class="row">
+                    <!-- Single Footer Widget Area -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="single-footer-widget mb-60">
+                            <!-- Footer Logo -->
+                            <a href="#" class="footer-logo"><img src="../img/core-img/logo.png" alt=""></a>
+                            <p><b>NewGen IEDC </b><br>Indian Institute of Information Technology Allahabad Devghat, Jhalwa, Prayagraj-211015, UP, INDIA </p>
+                           
+                        </div>
+                    </div>
+
+                  <!-- Single Footer Widget Area -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="single-footer-widget mb-60">
+                            <!-- Widget Title -->
+                            <h5 class="widget-title">Contact</h5>
+
+                            <!-- Contact Area -->
+                            <div class="footer-contact-info">
+                                <p><i class="zmdi zmdi-map"></i>IIIT Allahabad</p>
+                                <p><i class="zmdi zmdi-phone"></i> +91-9406054819</p>
+                                <p><i class="zmdi zmdi-email"></i> newgeniedc@iiita.ac.in<br>rkala@iiita.ac.in</p>
+                                <p><i class="zmdi zmdi-globe"></i>www.newgeniedc.iiita.ac.in</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Footer Widget Area -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="single-footer-widget mb-60">
+                            <!-- Widget Title -->
+                            <h5 class="widget-title">Site Links</h5>
+                            <!-- Footer Nav -->
+                            <ul class="footer-nav">
+                                <div class="footer-contact-info">
+                                   <a href="https://iiic.iiita.ac.in/" target="_blank"> <p>IIIC</p> </a>
+                                   <a href="http://esummit-iiita.com/" target="_blank"> <p>Esummit</p> </a>
+                                   <a href="https://iiita.ac.in/" target="_blank"> <p>IIIT Allahabad</p> </a>
+                                   <a href="https://newgeniedc.iiita.ac.in/apply/" target="_blank"> <p>NewGenIEDC Projects</p> </a>
+                                   <a href="https://newgeniedc.iiita.ac.in/cap/" target="_blank"> <p>Be a Campus Ambassador</p> </a>
+
+                                   
+                                </div>
+<hr>
+                             <!-- Social Info -->
+                            <div class="social-info">
+                                <a href="https://www.facebook.com/iiicallahabad/"><i class="zmdi zmdi-facebook"></i></a>
+                                <a href="mailto:newgeniedc@iiita.ac.in"><i class="zmdi zmdi-email"></i></a>
+                                <a href="https://in.linkedin.com/company/iiicallahabad"><i
+                                        class="zmdi zmdi-linkedin"></i></a>
+                           
+                    </div>
+
+                           
+                </div>
+            </div>
+        </div>
+
+        <!-- Copywrite Area -->
+        <div class="container">
+            <div class="copywrite-content">
+                <div class="row">
+                    <!-- Copywrite Text -->
+                    <div class="col-12 col-md-6">
+                        <div class="copywrite-text">
+                            <p>
+                                Developed by Team IIIC</a>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Footer Menu -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+
+    <!-- **** All JS Files ***** -->
+    
+    <!-- mentors.js -->
+    <script src="./mentors/mentors.js"></script>
+    <!-- jQuery 2.2.4 -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="./js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="./js/confer.bundle.js"></script>
+    <!-- Active -->
+    <script src="./js/default-assets/active.js"></script>
+
+</body>
+ 
+</html>
